@@ -26,6 +26,36 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 
+
+ion-content.background{
+  --background:  url("https://wallpapercave.com/wp/wp9314724.jpg");
+}
+
+ion-toolbar{
+  --background:  url("https://wallpapercave.com/wp/wp9314724.jpg");
+}
+
+ion-input.custom {
+  --background: white;
+  --color: black;
+  --placeholder-color: black;;
+    height: 32px;
+    width: 160px;
+    float: right;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+ion-item{
+  --background: transparent;
+}
+
+.clickable {
+  pointer-events: auto !important;
+  }
+
+
+
 .ion-page {
     background-image:  url("https://wallpapercave.com/wp/wp9314724.jpg");
   }

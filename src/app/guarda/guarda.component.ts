@@ -2,22 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
 import { ActivatedRoute, ChildActivationStart, Router } from '@angular/router';
 import { ServiceAnifab } from '../services';
-
 @Component({
-  selector: 'app-anime',
-  templateUrl: './anime.component.html',
-  styleUrls: ['./anime.component.scss'],
+  selector: 'app-guarda',
+  templateUrl: './guarda.component.html',
+  styleUrls: ['./guarda.component.scss'],
 })
-export class AnimeComponent implements OnInit {
+export class GuardaComponent implements OnInit {
   username: string = '';
   fullusername: string = '';
   list: any[] = [];
+  _storage: Storage | null = null;
   constructor(
     private storage: Storage,
     public router: Router,
     private ServiceAnifab: ServiceAnifab
   ) {}
-  _storage: Storage | null = null;
+
   async ngOnInit() {
     this.initStorage();
     this.fullusername = await this.storage.get('user');
@@ -35,10 +35,8 @@ export class AnimeComponent implements OnInit {
     this._storage = storage;
   }
 
-  ViewAnime(url: string) {}
-
   handleRefresh(event: any) {
-    this.router.navigate(['/anime']);
+    this.router.navigate(['/guarda']);
     setTimeout(() => {
       // Any calls to load data go here
       event.target.complete();

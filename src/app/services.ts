@@ -18,4 +18,7 @@ export class ServiceAnifab {
   LastSeen(user: string) {
     return this.http.get(baseurl + '/lastseenget?user=' + user);
   }
+
+  
+
 }
