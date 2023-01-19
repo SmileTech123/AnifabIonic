@@ -1,0 +1,450 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+.ion-page {
+    background-image:  url("https://wallpapercave.com/wp/wp9314724.jpg");
+  }
+
+  ion-content{
+    background-image:  url("https://wallpapercave.com/wp/wp9314724.jpg");
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    /* background-color: #222831; */
+    /* background-image: url("sfondo-galassia-default.png"); */
+    background-image: url("https://wallpapercave.com/wp/wp9314724.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Roboto", sans-serif;
+    color: seashell !important;
+  }
+  .center {
+    /* text-align: center; */
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  
+  .img-right {
+    background: url("https://anifab.duckdns.org:3000/public/assets/AnyaChanDefault.png");
+    height: 750px;
+    width: 300px;
+    position: fixed;
+    z-index: -2;
+    bottom: -30px;
+    right: 0;
+    background-size: cover;
+  }
+  .typewrite {
+    text-decoration: none;
+    pointer-events: none;
+    cursor: default;
+  }
+  .wrap {
+    font-size: 110px;
+  }
+  
+  .widget-body{
+    margin: 0 auto;
+    background-color: #131b20;
+    width: 900px;
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+  .mids {
+    height: 100vh;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .center2 {
+    text-align: center;
+  }
+  
+  .fc .fc-list-event:hover td{
+    background-color: transparent!important;
+  }
+  
+  .fc-theme-standard .fc-list-day-cushion{
+    background-color: #323232!important;
+  }
+  .poster {
+    width: 200px;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .imgposter {
+    height: 150px;
+    border-radius: 10px;
+    border: 2px solid white;
+  }
+  a {
+    color: seashell !important;
+  }
+  
+  .sett {
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 100px;
+  }
+  .form-check {
+    display: inline-block !important;
+    margin-right: 15px !important;
+  }
+  .itemsett {
+    background-color: #424242;
+    border-radius: 10px;
+    border: 2px solid white;
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    border-radius: 10px;
+    bottom: 0;
+    height: 50px;
+    text-align: center;
+    width: 100%;
+    background-color: #424242;
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+  }
+  
+  .sugg {
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    border-radius: 3px;
+    -ms-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 3px rgb(0 0 0 / 50%);
+    overflow: hidden;
+    color: black;
+    z-index: 999;
+    width: 208px;
+  }
+  .itmsugg {
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 3px;
+  }
+  
+  .pagination {
+    justify-content: center !important;
+  }
+  .page-link {
+    color: black !important;
+  }
+  
+  .alert-link {
+    color: black !important;
+    text-decoration: none;
+  }
+  
+  h3 {
+    color: red;
+    margin-top: 20%;
+  }
+  
+  .user_card {
+    height: 400px;
+    width: 350px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: #424242;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+  }
+  .brand_logo_container {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    border-radius: 50%;
+    background: #60a3bc;
+    padding: 10px;
+    text-align: center;
+  }
+  .brand_logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  .form_container {
+    margin-top: 100px;
+  }
+  .login_btn {
+    width: 100%;
+    background: #266e88 !important;
+    color: white !important;
+  }
+  .inner {
+    display: inline-grid;
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+  }
+  .login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+  }
+  .login_container {
+    padding: 0 2rem;
+  }
+  .input-group-text {
+    background: #266e88 !important;
+    color: white !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+  }
+  .input_user,
+  .input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+  }
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #c0392b !important;
+  }
+  
+  .dropdown-item {
+    color: black !important;
+  }
+  .profile {
+    width: 130px;
+    height: 130px;
+    border: 4px solid white;
+    border-radius: 100px;
+  }
+  
+  .profilebar {
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 100px;
+    margin-right: 10px;
+  }
+  
+  .customcarousel{
+      width: 50%!important;;
+      margin: 0 auto!important;;
+      max-height: 500px!important;
+  }
+  
+  .friend {
+    border: 2px solid white;
+    width: 200px;
+    display: inline-table;
+    height: 160px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  .searchfriend {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .friendimg {
+    border: 2px solid white;
+    width: 100px;
+    border-radius: 110px;
+  }
+  .range {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .imgInfo{
+    vertical-align: top;
+    margin: 10px;
+    border:1px solid white; 
+    border-radius: 10px;
+    width: 150px;
+  }
+  
+  .trama{
+    margin:10px;
+    text-align:center
+  }
+  
+  .carouselImage{
+   height: 500px!important;
+   width: 100%!important;
+  }
+  
+  @media only screen and (max-width: 1920px) {
+    .customcarousel{
+      width: 100%!important;
+        
+    }
+    .carouselImage{
+      height: 500px!important;
+      width: 100%!important;
+     }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .sugg {
+      background-color: white;
+      position: absolute;
+      top: 93px;
+      border-radius: 3px;
+      -ms-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+      -o-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 2px 3px rgb(0 0 0 / 50%);
+      overflow: hidden;
+      color: black;
+      z-index: 999;
+      width: 157px;
+    }
+  
+    .customcarousel{
+      width: 100%!important;
+        
+    }
+    .carouselImage{
+      height: 150px!important;
+      width: 100%!important;
+     }
+  
+    .img-right {
+      background: url("https://anifab.duckdns.org:3000/public/assets/AnyaChanDefault.png");
+      height: 750px;
+      width: 350px;
+      position: fixed;
+      z-index: -2;
+      bottom: -30px;
+      right: 0;
+      background-size: cover;
+    }
+  
+    .wrap {
+      font-size: 50px;
+    }
+    .profile {
+      width: 100px;
+      height: 100px;
+      border: 4px solid white;
+      border-radius: 60px;
+    }
+  
+    .friendimg {
+      border: 2px solid white;
+      width: 70px;
+      border-radius: 110px;
+    }
+  
+    .imgInfo{
+      vertical-align: top;
+      margin: 10px;
+      border:1px solid white; 
+      border-radius: 10px;
+      width: 80px;
+    }
+    .trama{
+      margin:10px;
+      margin-left:25px;
+      text-align:center;
+      font-size: 12px;
+    }
+    .friend {
+      border: 2px solid white;
+      width: 200px;
+      display: inline-table;
+      height: 130px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+  
+    .profilebar {
+      width: 35px;
+      height: 35px;
+      border: 2px solid white;
+      border-radius: 100px;
+      margin-right: 10px;
+    }
+  
+    .footer {
+      position: fixed;
+      left: 0;
+      border-radius: 10px;
+      bottom: 0;
+      height: 50px;
+  
+      width: 90%;
+      background-color: #424242;
+      border: 2px solid white;
+      color: white;
+      text-align: center;
+    }
+    .poster {
+      width: 100px;
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+    }
+  
+  
+    .inner {
+      display: inline-grid;
+      margin: 10px;
+      text-align: center;
+      width: 150px;
+    }
+  
+    .center {
+      /* text-align: center; */
+      width: 100%;
+      margin: 0 auto;
+    }
+    .widget-body{
+      margin: 0 auto;
+      background-color: #131b20;
+      width: 300px;
+      border: 2px solid white;
+      border-radius: 10px;
+    }
+  }
+  

@@ -1,0 +1,7 @@
+{
+  "name": "Anifab",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

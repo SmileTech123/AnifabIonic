@@ -1,0 +1,54 @@
+<div class="img-right"></div>
+
+    <div style="padding-top: 10%;"  class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="https://anifab.duckdns.org:3000/public/assets/anifablogo.png" class="brand_logo" alt="Logo">
+					</div>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+					<form>
+						<!-- <div class="input-group mb-3">
+							<div class="input-group-append">
+								<span style="font-size: 26px;" class="input-group-text"><ion-icon name="person-outline"></ion-icon></span>
+							</div>
+							<input id="user" type="email" name="" class="form-control input_user" value="" placeholder="Email">
+						</div> -->
+            <ion-item >
+              <ion-label position="floating">Username</ion-label>
+              <ion-input type="email" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" placeholder="Username"></ion-input>
+            </ion-item>
+						<ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Password"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-checkbox [(ngModel)]="isRemember" [ngModelOptions]="{standalone: true}" slot="start"></ion-checkbox>
+              <ion-label>Ricordami</ion-label>
+            </ion-item>
+							<div class="d-flex justify-content-center mt-3 login_container">
+                <ion-button (click)="Login()">Accedi</ion-button>
+				   </div>
+					</form>
+				</div>
+		
+				<div class="mt-4">
+					<div id="labelreg" class="d-flex justify-content-center links">
+						Non hai un account? <a href="/pages/login.html?newuser=si" class="ml-2">Registrati</a>
+					</div>
+					<div class="d-flex justify-content-center links">
+						<!-- <a href="#">Password dimenticata?</a> -->
+					</div>
+
+				</div>
+        <br>
+         <div id="al" style="display:none" class="alert" role="alert">
+          A simple success alert—check it out!
+      </div>
+			</div>
+
+		</div>
+
+	</div>
