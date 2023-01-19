@@ -42,7 +42,17 @@ export class AnimeComponent implements OnInit {
     this._storage = storage;
   }
 
+  ViewAnime(url: string) {}
+
+  handleRefresh(event: any) {
+    this.router.navigate(['/anime']);
+    setTimeout(() => {
+      // Any calls to load data go here
+      event.target.complete();
+    }, 2000);
+  }
+
   disconnect() {
-    this.router.navigateByUrl('/?disconnect=si');
+    this.router.navigate(['/disconnect']);
   }
 }

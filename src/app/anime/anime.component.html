@@ -51,10 +51,13 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding background">
-
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <div style="text-align: center;font-size: 20px;">Ultimi Visti</div>
     <ion-slides [options]="{ slidesPerView: 2, loop: true }" >
-      <ion-slide *ngFor="let item of list"><div class="inner"><a href="/pages/guarda.html?link=/play/boku-no-hero-academia-6.3Oxq2/A1vNxr&amp;episode=13&amp;titolo=Boku no Hero Academia 6&amp;img=https://img.animeworld.tv/locandine/3Oxq2.jpg&amp;rangeid=0"><div class="poster"><img title="Boku no Hero Academia 6" class="imgposter" src="https://img.animeworld.tv/locandine/3Oxq2.jpg"></div></a><a style="display: block;">{{item.titolo }} - Ep.{{item.episodio}}</a></div></ion-slide>
+      <ion-slide *ngFor="let item of list"><div class="inner"><a (click)="ViewAnime(item.animelink)"><div class="poster"><img title="{{item.titolo}}" class="imgposter" src="{{item.imglink}}"></div></a><a style="display: block;">{{item.titolo }} - Ep.{{item.episodio}}</a></div></ion-slide>
     </ion-slides>
-  
+    <hr>
   </ion-content>
 </div>

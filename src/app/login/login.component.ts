@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   password: string = '';
   isDisconnected: boolean = false;
   isRemember: boolean = false;
+  IsRememberData: any = false;
   _storage: Storage | null = null;
   constructor(
     private storage: Storage,
@@ -21,9 +22,9 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.activeroute.queryParams.subscribe((param) => {
-      console.log();
-      if (param['disconnect'] != undefined) {
+    this.activeroute.url.subscribe((param) => {
+      console.log(param[0]);
+      if (param[0] != undefined) {
         this.isDisconnected = true;
       } else {
         this.isDisconnected = false;
@@ -36,8 +37,13 @@ export class LoginComponent implements OnInit {
     // If using, define drivers here: await this.storage.defineDriver(/*...*/);
 
     const storage = await this.storage.create();
-    console.log(this.isDisconnected);
+
+    this.IsRememberData = this._storage?.get('remeber');
+    console.log(this.isDisconnected, this.IsRememberData);
     if (this.isDisconnected) {
+      await this.storage.clear();
+    }
+    if (!this.IsRememberData) {
       await this.storage.clear();
     }
 
@@ -58,6 +64,11 @@ export class LoginComponent implements OnInit {
           if (this.isRemember) {
             this._storage?.set('user', this.username);
             this._storage?.set('password', this.password);
+            this._storage?.set('remeber', true);
+          } else {
+            this._storage?.set('user', this.username);
+            this._storage?.set('password', this.password);
+            this._storage?.set('remeber', false);
           }
 
           this.router.navigate(['/anime']);

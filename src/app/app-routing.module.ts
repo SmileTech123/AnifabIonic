@@ -8,6 +8,10 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
+    path: 'disconnect',
+    component: LoginComponent,
+  },
+  {
     path: 'anime',
     component: AnimeComponent,
   },
