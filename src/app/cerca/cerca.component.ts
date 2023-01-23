@@ -5,11 +5,11 @@ import { ActivatedRoute, ChildActivationStart, Router } from '@angular/router';
 import { ServiceAnifab } from '../services';
 declare var $: any;
 @Component({
-  selector: 'app-anime',
-  templateUrl: './anime.component.html',
-  styleUrls: ['./anime.component.scss'],
+  selector: 'app-cerca',
+  templateUrl: './cerca.component.html',
+  styleUrls: ['./cerca.component.scss'],
 })
-export class AnimeComponent implements OnInit {
+export class CercaComponent implements OnInit {
   username: string = '';
   fullusername: string = '';
   listLastSeen: any[] = [];
@@ -18,7 +18,6 @@ export class AnimeComponent implements OnInit {
   constructor(
     private storage: Storage,
     public router: Router,
-
     private ServiceAnifab: ServiceAnifab
   ) {}
   _storage: Storage | null = null;
@@ -27,32 +26,6 @@ export class AnimeComponent implements OnInit {
     this.initStorage();
     this.fullusername = await this.storage.get('user');
     this.username = this.fullusername.split('@')[0];
-    this.ServiceAnifab.OngoingAndSearch('').subscribe((r: any) => {
-      //this.listLatestAnime = r;
-      var lista = $(r).find('.film-list');
-      lista = $(lista).find('.item');
-      if (lista.length == 0) {
-        $('.center').append('<h3>Nessun risultato</h3>');
-      } else {
-        for (let i = 0; i < lista.length; i++) {
-          const itm = lista[i];
-          var href = $(itm).find('.inner').find('a.poster').attr('href');
-          var img = $(itm)
-            .find('.inner')
-            .find('a.poster')
-            .find('img')
-            .attr('src');
-          // var title = $(itm).find(".inner").find("a.name").text();
-          var fulltitle = $(itm).find('.inner').find('a.name').text();
-          var obj = { animelink: href, titolo: fulltitle, imglink: img };
-          this.listLatestAnime.push(obj);
-        }
-      }
-      this.ServiceAnifab.LastSeen(this.fullusername).subscribe((r: any) => {
-        this.listLastSeen = r;
-      });
-      this.initialStyleProgressBar = 'display:none';
-    });
   }
 
   async initStorage() {

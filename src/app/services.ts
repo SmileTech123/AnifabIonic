@@ -19,6 +19,19 @@ export class ServiceAnifab {
     return this.http.get(baseurl + '/lastseenget?user=' + user);
   }
 
-  
+  GetLink(link: string) {
+    return this.http.get(baseurl + '/getlink?link=' + link, {
+      responseType: 'text',
+    });
+  }
 
+  GetVideoLink(tokenid: string) {
+    return this.http.get(baseurl + '/getvideolink?id=' + tokenid);
+  }
+
+  OngoingAndSearch(src: string) {
+    return this.http.get(baseurl + '/homepage?src=' + src, {
+      responseType: 'text',
+    });
+  }
 }

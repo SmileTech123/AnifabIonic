@@ -54,6 +54,8 @@
     <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
       <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
-
+    <div style="text-align: center;">
+      <video style="margin-top:30px;border-radius:10px;" [width]="videoWidth" controls><source [src]="videoSrc" type="video/mp4"></video>
+    </div>
   </ion-content>
 </div>

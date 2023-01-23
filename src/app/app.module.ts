@@ -8,13 +8,21 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AnimeComponent } from './anime/anime.component';
 import { GuardaComponent } from './guarda/guarda.component';
+import { CercaComponent } from './cerca/cerca.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage-angular';
 import { SwiperModule } from 'swiper/angular';
+('');
 @NgModule({
-  declarations: [AppComponent, LoginComponent, AnimeComponent, GuardaComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    AnimeComponent,
+    GuardaComponent,
+    CercaComponent,
+  ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
