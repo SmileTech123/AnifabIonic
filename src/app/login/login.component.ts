@@ -10,6 +10,8 @@ import { Storage } from '@ionic/storage-angular';
 export class LoginComponent implements OnInit {
   username: string = '';
   password: string = '';
+  PasswordType: string = 'password';
+  EyeClass: string = 'eye-outline';
   isDisconnected: boolean = false;
   isRemember: boolean = false;
   IsRememberData: any = false;
@@ -53,6 +55,16 @@ export class LoginComponent implements OnInit {
       this.username = await this._storage?.get('user');
       this.password = await this._storage?.get('password');
       this.Login();
+    }
+  }
+
+  ViewPassword() {
+    if (this.EyeClass == 'eye-outline') {
+      this.EyeClass = 'eye-off-outline';
+      this.PasswordType = 'text';
+    } else {
+      this.EyeClass = 'eye-outline';
+      this.PasswordType = 'password';
     }
   }
 

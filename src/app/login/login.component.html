@@ -22,7 +22,10 @@
             </ion-item>
 						<ion-item>
               <ion-label position="floating">Password</ion-label>
-              <ion-input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Password"></ion-input>
+              <ion-input [type]="PasswordType" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Password"></ion-input>
+			  <ion-button (click)="ViewPassword()" style="margin-top: 22px;" color="primary" size="deafult" slot="end" >
+				<ion-icon slot="icon-only" [name]="EyeClass"></ion-icon>
+			</ion-button>
             </ion-item>
             <ion-item>
               <ion-checkbox [(ngModel)]="isRemember" [ngModelOptions]="{standalone: true}" slot="start"></ion-checkbox>
