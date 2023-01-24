@@ -80,8 +80,21 @@ export class AnimeComponent implements OnInit {
     this._storage = storage;
   }
 
-  ViewAnime(url: string) {
-    this.router.navigateByUrl('/guarda?link=' + url);
+  ViewAnime(item: any) {
+    console.log(item);
+    //link=/play/nierautomata-ver11a.RHFEf/d5g7yN&episode=3&titolo=NieR:Automata%20Ver1.1a&img=https://img.animeworld.tv/locandine/RHFEf.jpg&rangeid=0
+    var url =
+      'link=' +
+      item.animelink +
+      '&episode=' +
+      item.episodio +
+      '&titolo=' +
+      item.titolo +
+      '&img=' +
+      item.imglink +
+      '&rangeid=' +
+      item.rangeid;
+    this.router.navigateByUrl('/guarda?' + url);
   }
 
   handleRefresh(event: any) {

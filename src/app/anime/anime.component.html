@@ -59,11 +59,11 @@
     </ion-refresher>
     <div *ngIf="!IsSearching" style="text-align: center;font-size: 20px;">Ultimi Visti</div>
     <ion-slides *ngIf="!IsSearching" [options]="{ slidesPerView: 2, loop: true }" >
-      <ion-slide *ngFor="let item of listLastSeen"><div class="inner"><a (click)="ViewAnime(item.animelink)"><div class="poster"><img title="{{item.titolo}}" class="imgposter" src="{{item.imglink}}"></div></a><a style="display: block;">{{item.titolo }} - Ep.{{item.episodio}}</a></div></ion-slide>
+      <ion-slide *ngFor="let item of listLastSeen"><div class="inner"><a (click)="ViewAnime(item)"><div class="poster"><img title="{{item.titolo}}" class="imgposter" src="{{item.imglink}}"></div></a><a style="display: block;">{{item.titolo }} - Ep.{{item.episodio}}</a></div></ion-slide>
     </ion-slides>
     <div style="text-align: center;font-size: 20px;">{{ IsSearching?"Risultati per: "+ Searchstring:"In Corso"}}</div>
     <ion-slides [options]="{ slidesPerView: 2, loop: true }" >
-      <ion-slide *ngFor="let item of listLatestAnime"><div class="inner"><a (click)="ViewAnime(item.animelink)"><div class="poster"><img title="{{item.titolo}}" class="imgposter" src="{{item.imglink}}"></div></a><a style="display: block;">{{item.titolo }}</a></div></ion-slide>
+      <ion-slide *ngFor="let item of listLatestAnime"><div class="inner"><a (click)="ViewAnime(item)"><div class="poster"><img title="{{item.titolo}}" class="imgposter" src="{{item.imglink}}"></div></a><a style="display: block;">{{item.titolo }}</a></div></ion-slide>
     </ion-slides>
     <ion-button (click)="BackToHome()" *ngIf="IsSearching" expand="block">Torna alla Home</ion-button>
     <hr>
